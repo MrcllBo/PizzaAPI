@@ -11,27 +11,7 @@ namespace PizzaAPI.Data
         public static void Initialize(IServiceProvider serviceProvider)
         {
             using (var context = new PizzaContext(serviceProvider.GetRequiredService<DbContextOptions<PizzaContext>>()))
-            {
-                if (!context.Dough.Any())
-                {
-                    context.Dough.AddRange(
-                        new Dough
-                        {
-                            Name = "Normale",
-                            IsGlutenFree = false
-                        },
-                        new Dough
-                        {
-                            Name = "Farro",
-                            IsGlutenFree = false
-                        },
-                        new Dough
-                        {
-                            Name = "Senza Glutine",
-                            IsGlutenFree = true
-                        }
-                        );
-                }
+            {                
 
                 if (!context.Sauce.Any())
                 {

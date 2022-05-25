@@ -11,7 +11,6 @@ namespace PizzaAPI.Data
         public DbSet<Pizza> Pizza => Set<Pizza>();
         public DbSet<Topping> Topping => Set<Topping>();
         public DbSet<Sauce> Sauce => Set<Sauce>();
-        public DbSet<Dough> Dough => Set<Dough>();
 
     }
 }
