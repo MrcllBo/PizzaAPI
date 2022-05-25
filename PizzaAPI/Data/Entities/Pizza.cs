@@ -11,9 +11,6 @@ namespace PizzaAPI.Data.Entities
         [MaxLength(100)]
         public string? Name { get; set; }
 
-        [Required]
-        public Dough Dough { get; set; }
-
         public Sauce? Sauce { get; set; }
 
         public ICollection<Topping>? Toppings { get; set; }
