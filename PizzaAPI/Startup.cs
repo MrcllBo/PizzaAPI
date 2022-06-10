@@ -44,6 +44,8 @@ namespace PizzaAPI
             //services.AddAutoMapper(typeof(AutoMapProfile));
 
             services.AddScoped<IPizzaServices, PizzaServices>();
+            services.AddScoped<IToppingServices, ToppingServices>();
+            services.AddScoped<ISauceServices, SauceServices>();
 
         }
 
